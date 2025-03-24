@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IeiCspFxH4Q=",
+  "dgSpecHash": "TbLP0hAa4J0=",
   "success": true,
-  "projectFilePath": "/Users/ajy/Desktop/class/DPLL/DPLL/DPLL.fsproj",
+  "projectFilePath": "/Users/prl/Desktop/task/DPLL/DPLL.fsproj",
   "expectedPackageFiles": [
-    "/Users/ajy/.nuget/packages/fsharp.core/9.0.201/fsharp.core.9.0.201.nupkg.sha512"
+    "/Users/prl/.nuget/packages/fsharp.core/9.0.201/fsharp.core.9.0.201.nupkg.sha512"
   ],
   "logs": []
 }

@@ -64,7 +64,7 @@ let assignLiteral (formula: CNF) (var: int) (value: bool) : CNF =
     )
 
 // BCP(Boolean Constraint Propagation) implementation
-let rec unitPropagation (formula: CNF, assignment: Assignment) : (CNF, Assignment) =
+let rec unitPropagation (formula: CNF, assignment: Assignment) : (CNF * Assignment) option =
     // collect all unit clauses(only one literal)
     let unitClauses: Clause list = formula |> List.filter (fun clause -> clause.Length = 1)
     if unitClauses.IsEmpty then Some(formula, assignment)       // no unit clause
@@ -87,7 +87,7 @@ let rec unitPropagation (formula: CNF, assignment: Assignment) : (CNF, Assignmen
         unitClauses |> List.fold folder (Some(formula, assignment)) // start BCP
 
 /// PLE(Pure Literal Elimination) implementation
-let pureLiteralElimination (formula: CNF, assignment: Assignment) : (CNF, Assignment) =
+let pureLiteralElimination (formula: CNF, assignment: Assignment) : (CNF * Assignment) =
     let allLits = List.concat formula
     let pureAssignments: (int * bool) list =
         allLits

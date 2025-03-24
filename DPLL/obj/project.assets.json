@@ -108,19 +108,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/ajy/.nuget/packages/": {}
+    "/Users/prl/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ajy/Desktop/class/DPLL/DPLL/DPLL.fsproj",
+      "projectUniqueName": "/Users/prl/Desktop/task/DPLL/DPLL.fsproj",
       "projectName": "DPLL",
-      "projectPath": "/Users/ajy/Desktop/class/DPLL/DPLL/DPLL.fsproj",
-      "packagesPath": "/Users/ajy/.nuget/packages/",
-      "outputPath": "/Users/ajy/Desktop/class/DPLL/DPLL/obj/",
+      "projectPath": "/Users/prl/Desktop/task/DPLL/DPLL.fsproj",
+      "packagesPath": "/Users/prl/.nuget/packages/",
+      "outputPath": "/Users/prl/Desktop/task/DPLL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ajy/.nuget/NuGet/NuGet.Config"
+        "/Users/prl/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
