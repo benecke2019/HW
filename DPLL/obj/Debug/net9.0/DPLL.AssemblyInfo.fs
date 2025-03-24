@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("DPLL")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd928e80386a7f4fd91d1fcd285d948a9171687f")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f1ac8201c70a9eb6b47dcafc59cc226a3e71abc")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("DPLL")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("DPLL")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

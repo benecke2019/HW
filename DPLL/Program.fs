@@ -12,6 +12,10 @@ type CNF = Clause list
 // Assignment: mapping variable to value(ex. {1 -> true; 2 -> false})
 type Assignment = Map<int, bool>
 
+let randEllemt (lst: 'a list) : 'a =
+    let rnd = Random()
+    let idx = rnd.Next(List.length lst)
+    List.item idx lst
 
 // DIMACS file parser
 let parseDimacs (lines: seq<string>) : int * CNF =
@@ -123,7 +127,8 @@ let rec dpll (formula: CNF) (assignment: Assignment) (numVars: int) : Assignment
             let unassigned = Set.difference allVars allAssigned |> Set.toList   // get unassigned variables
             if unassigned.IsEmpty then Some assignment2                         // all variables are assigned
             else
-                let var = List.head unassigned  // for all unassigned variables(lexicographic order)
+                //let var = List.head unassigned  // for all unassigned variables(lexicographic order)
+                let var = randEllemt unassigned   // for all unassigned variables(random order)
                 let tryTrue = dpll (assignLiteral formula2 var true) (assignment2.Add(var, true)) numVars   // first try with true
                 match tryTrue with
                 | Some sol -> Some sol
