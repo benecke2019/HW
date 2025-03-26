@@ -23,6 +23,8 @@ let parseDimacs (lines: seq<string>) : int * CNF =
     let content = 
         lines 
         |> Seq.filter (fun line -> not (line.StartsWith("c") || String.IsNullOrWhiteSpace(line)))
+        |> Seq.filter (fun line -> not (line.StartsWith("%")))  // for some SAT instances
+        |> Seq.filter (fun line -> not (line.StartsWith("0")))   // for some SAT instances
         |> Seq.toList  // convert to list
 
     // seperate header and clauses
