@@ -61,13 +61,19 @@ let readDimacs path =
 // assign var with vlaue and remove opposite literal
 let assignLiteral (formula: CNF) (var: int) (value: bool) : CNF =
     let lit = if value then var else -var   
-    formula |> List.choose (fun clause ->
+    let newFormula =
+        formula 
+        |> List.choose (fun clause ->
         if List.contains lit clause then
             None                            // remove clause
         else                                // remove opposite literal
             let newClause = clause |> List.filter (fun l -> l <> -lit)
             Some newClause
     )
+    if List.exists (fun clause -> clause = []) newFormula then
+        [[]]  // contradiction
+    else 
+        newFormula
 
 // BCP(Boolean Constraint Propagation) implementation
 let rec unitPropagation (formula: CNF, assignment: Assignment) : (CNF * Assignment) option =
